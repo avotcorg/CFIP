@@ -5,7 +5,7 @@ on:
     - cron: '00 2 * * *'
 
 env:
-  downloadurl: ${{secrets.DOWNLOADURL}}
+  downloadurl: ${{secrets.downloadurl }}
 
 permissions:
   contents: write
@@ -25,7 +25,7 @@ jobs:
     
     - name: Get source data
       run: |
-        wget -N $downloadurl -O ip.zip
+        wget -N ${{secrets.downloadurl }} -O ip.zip
         unzip ip.zip -d ./ips
         rm ip.zip
 
