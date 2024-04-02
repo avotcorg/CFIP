@@ -1,4 +1,4 @@
-name: CFIP
+name: main
 
 on:
   schedule:
