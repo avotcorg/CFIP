@@ -5,7 +5,7 @@ on:
     - cron: '00 2 * * *'
 
 env:
-  downloadurl: ${{ secrets.DOWNLOADURL }}
+  downloadurl: ${{secrets.DOWNLOADURL}}
 
 permissions:
   contents: write
